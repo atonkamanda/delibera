@@ -39,7 +39,7 @@ This repository is organized into several modules, each implementing a critical 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/DeliberativeAlignment.git
+   git clone https://github.com/atonkamanda/delibera.git
    cd DeliberativeAlignment
    ```
 
