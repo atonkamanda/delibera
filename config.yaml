@@ -1,0 +1,28 @@
+# Configuration file for the Deliberative Alignment Training Pipeline.
+# This file aggregates parameters for both supervised fine-tuning (SFT) and reinforcement learning (RL).
+# The SFT stage (including sft_data_generation.py and sft.py) will NOT inject explicit safety policies into the inputs.
+
+mode: "sft"              # Options: "sft", "rl", "all"
+dataset: "allenai/WildChat-1M"      # Dataset name (assumed to be available on Hugging Face Hub)
+policies_config: "config/policies.yaml"  # Path to the safety policies YAML configuration
+
+# Supervised Fine-Tuning (SFT) parameters:
+sft_model: "unsloth/DeepSeek-R1-Distill-Llama-8B"
+max_seq_length: 4096
+load_in_4bit: false      # Use 4-bit quantization: true / false
+sft_batch_size: 2
+sft_grad_accum_steps: 4
+sft_max_steps: 60       # Maximum training steps (for quick testing; adjust as needed)
+sft_learning_rate: 0.0002
+seed: 3407
+
+# Reinforcement Learning (RL) parameters:
+rl_model_path: "SafeSeek-8B-SFT"    # Checkpoint path from SFT for RL training
+ppo_learning_rate: 1e-5
+ppo_batch_size: 4
+ppo_mini_batch_size: 2
+ppo_epochs: 4
+ppo_cliprange: 0.2
+ppo_cliprange_value: 0.2
+ppo_vf_coef: 0.1
+ppo_initial_kl_coef: 0.2 
