@@ -1,6 +1,6 @@
 # Deliberative Alignment: Reasoning Enables Safer Language Models
 
-> _"To have a profoundly ethical AI system it also has to be very capable.It need a really good world model, a good understanding of ethics and it need really god reasoning. Because if you don't have any of those things How can you possibly be consistently profondly ethical ? - Shane Legg Cofouder of deepmind"_
+> _"To have a profoundly ethical AI system it also has to be very capable.It need a really good world model, a good understanding of ethics and it need really god reasoning. Because if you don't have any of those things How can you possibly be consistently profondly ethical ? - Shane Legg Cofounder of deepmind"_
 
 Welcome to the repository—a reimplementation of the paper [Deliberative Alignment: Reasoning Enables Safer Language Models](https://arxiv.org/abs/2412.16339). This project demonstrates how to train language models, specifically using the **DeepSeek-R1** model, so the model can explicitly reason over its own safety policies before producing a response. The approach enhances safety by ensuring that each generated answer complies with a well-defined set of reasoning steps and policy constraints.
 
